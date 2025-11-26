@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Khan | Portfolio</title>
+  <link rel="stylesheet" href="7.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="greeting">Hi, I'm Ahmad</h1>
+    <p id="description">I am a student at LGU and a Web Developer.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home" onclick="scrollToSection('home')">Home</a></li>
+      <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+      <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+      <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>I create modern, responsive, and user-friendly websites to solve real-world problems.</p>
+
+    <section id="projects">
+      <h3>Projects</h3>
+      <ul>
+        <li>
+          <strong>Health Hub:</strong> A web app for managing patient records and appointments.
+        </li>
+        <li>
+          <strong>Gaming Portal:</strong> An interactive web-based game application.
+        </li>
+        <li>
+          <strong>Portfolio Website:</strong> A personal portfolio to showcase projects and skills.
+        </li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h3>About Me</h3>
+      <p>I am a student at LGU, passionate about Web Development, and constantly learning new technologies to improve my skills.</p>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>Email: ahmad@example.com</p>
+      <p>Phone: +92 300 1234567</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ahmad Khan</p>
+  </footer>
+
+  <script>
+    // Smooth scroll to sections
+    function scrollToSection(id) {
+      const section = document.getElementById(id);
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Dynamic greeting based on time
+    const greetingEl = document.getElementById('greeting');
+    const now = new Date();
+    const hour = now.getHours();
+    if(hour < 12) greetingEl.textContent = "Good Morning, I'm Ahmad";
+    else if(hour < 18) greetingEl.textContent = "Good Afternoon, I'm Ahmad";
+    else greetingEl.textContent = "Good Evening, I'm Ahmad";
+  </script>
+
+</body>
+</html>
